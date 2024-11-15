@@ -33,7 +33,7 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
     <title>Dashboard - Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/adminpage.css" rel="stylesheet" />
+    <link href="/css/adminpage.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
@@ -68,7 +68,7 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link" href="adminpage.php">
+                        <a class="nav-link" href="admindashboard.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
@@ -122,15 +122,6 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
                                 </div>
                             </nav>
                         </div>
-                        <div class="sb-sidenav-menu-heading">Addons</div>
-                        <a class="nav-link" href="charts.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            Charts
-                        </a>
-                        <a class="nav-link" href="tables.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Tables
-                        </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
@@ -208,7 +199,7 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
+        <script src="/js/script.js"></script>
 </body>
 
 </html>
