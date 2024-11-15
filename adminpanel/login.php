@@ -9,13 +9,13 @@ if (isset($_POST['submit'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    $query_admin = "SELECT * FROM admin_tb WHERE email = '$email' AND password = '$password'";
+    $query_admin = "SELECT * FROM admin_db WHERE email = '$email' AND password = '$password'";
     $result_admin = mysqli_query($conn, $query_admin);
 
     if (mysqli_num_rows($result_admin) > 0) {
         $row_admin = mysqli_fetch_assoc($result_admin);
         $_SESSION['admin_name'] = $row_admin['name'];
-        header('location:adminpage.php');
+        header('location:admindashboard.php');
         exit();
     }
 

@@ -137,6 +137,7 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
+                    <!--
                     <div class="row">
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-info text-white mb-4">
@@ -189,9 +190,8 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
                                     <div class="large text-white" style="font-size: 1.25rem;"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Additional cards for other counts if needed -->
-                    </div>
+                        </div>                        
+                    </div>-->
                     <!-- The rest of dashboard content -->
                 </div>
             </main>
