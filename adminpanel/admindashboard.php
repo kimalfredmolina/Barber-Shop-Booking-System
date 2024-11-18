@@ -80,6 +80,7 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="/adminpanel/admindb/admin_db.php">Employee Information</a>
                                 <a class="nav-link" href="#">Reservation Information</a>
                             </nav>
                         </div>
