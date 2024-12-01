@@ -11,9 +11,9 @@
     $(function() {
       $('.hero-slides').vegas({
           slides: [
-              { src: '/images/slides/barber.jpg' },
-              { src: '/images/slides/barber1.jpg' },
-              { src: '/images/slides/barber3.jpg' }
+              { src: '/Trim&Tonic/images/slides/barber.jpg' },
+              { src: '/Trim&Tonic/images/slides/barber1.jpg' },
+              { src: '/Trim&Tonic/images/slides/barber3.jpg' }
           ],
           timer: false,
           animation: 'kenburns',
