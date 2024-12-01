@@ -2,11 +2,11 @@
 session_start();
 require '../config.php';
 
-/*$student_count_query = "SELECT COUNT(*) AS student_count FROM student_tb";
-$student_count_result = mysqli_query($conn, $student_count_query);
-$student_count = mysqli_fetch_assoc($student_count_result)['student_count'];
+$emp_count_query = "SELECT COUNT(*) AS emp_count FROM admin_db";
+$emp_count_result = mysqli_query($conn, $emp_count_query);
+$emp_count = mysqli_fetch_assoc($emp_count_result)['emp_count'];
 
-$faculty_count_query = "SELECT COUNT(*) AS faculty_count FROM faculty_tb";
+/*$faculty_count_query = "SELECT COUNT(*) AS faculty_count FROM faculty_tb";
 $faculty_count_result = mysqli_query($conn, $faculty_count_query);
 $faculty_count = mysqli_fetch_assoc($faculty_count_result)['faculty_count'];
 
@@ -80,7 +80,7 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/adminpanel/admindb/admin_db.php">Employee Information</a>
+                                <a class="nav-link" href="/adminpanel/admin_db.php">Employee Information</a>
                                 <a class="nav-link" href="#">Reservation Information</a>
                             </nav>
                         </div>
@@ -138,22 +138,22 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
-                    <!--
                     <div class="row">
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-info text-white mb-4">
                                 <div class="card-body d-flex justify-content-between align-items-center" style="font-size: 1.5rem;">
                                     <span><i class="fa-solid fa-user fa-xl"></i></span>
-                                    <span class>Total Students:</span>
-                                    <span class="text-white"><?= $student_count; ?></span>
+                                    <span class>Total Employee:</span>
+                                    <span class="text-white"><?= $emp_count; ?></span>
                                 </div>
                                 <div class="card-footer d-flex align-items-center justify-content-between" style="font-size: 1.25rem;">
-                                    <a class="large text-white stretched-link" href="studentdb.php" style="font-size: 1rem;">View Details</a>
+                                    <a class="large text-white stretched-link" href="admin_db.php" style="font-size: 1rem;">View Details</a>
                                     <div class="large text-white" style="font-size: 1.25rem;"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-md-6">
+
+                        <!--<div class="col-xl-3 col-md-6">
                             <div class="card bg-success text-white mb-4">
                                 <div class="card-body d-flex justify-content-between align-items-center" style="font-size: 1.5rem;">
                                     <span><i class="fa-solid fa-user fa-xl"></i></span>
@@ -193,8 +193,8 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
                             </div>
                         </div>                        
                     </div>-->
-                    <!-- The rest of dashboard content -->
-                </div>
+                        <!-- The rest of dashboard content -->
+                    </div>
             </main>
 
 

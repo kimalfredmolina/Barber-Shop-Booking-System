@@ -2,7 +2,7 @@
 session_start();
 require '../../config.php';
 
-// Delete emp
+// Delete employee
 if (isset($_POST['delete_emp'])) {
     $emp_id = mysqli_real_escape_string($conn, $_POST['delete_emp']);
 
@@ -18,7 +18,7 @@ if (isset($_POST['delete_emp'])) {
     exit(0);
 }
 
-// Update emp
+// Update employee
 elseif (isset($_POST['update_emp'])) {
     $employee_id = mysqli_real_escape_string($conn, $_POST['employee_id']);
     $name = mysqli_real_escape_string($conn, $_POST['name']);
@@ -58,7 +58,7 @@ elseif (isset($_POST['update_emp'])) {
     exit(0);
 }
 
-// Save New emp
+// Save New employee
 elseif (isset($_POST['save_emp'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
