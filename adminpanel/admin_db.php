@@ -20,7 +20,7 @@ require '../config.php';
 <body>
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="adminpage.php">Drake's Barbershopzs</a>
+        <a class="navbar-brand ps-3" href="adminpage.php">Trim and Tonic</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar -->
@@ -121,7 +121,7 @@ require '../config.php';
                     </div>
                     <h1 class="mt-4">Employee Information</h1>
                     <ol class="breadcrumb mb-4">
-                        <a class="btn btn-primary" href="dataadd_stud.php" role="button"><i class="fa-solid fa-plus"></i> Add Employee</a>
+                        <a class="btn btn-primary" href="admin_add.php" role="button"><i class="fa-solid fa-plus"></i> Add Employee</a>
                     </ol>
 
                     <!-- Search Form -->
@@ -176,8 +176,8 @@ require '../config.php';
                                             <td>
                                                 <a href="dataview_stud.php?id=<?= $items['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
                                                 <a href="dataedit_stud.php?id=<?= $items['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a>
-                                                <form action="function.php" method="POST" class="d-inline">
-                                                    <button type="submit" name="delete_student" value="<?= $items['id']; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt fa-lg"></i></button>
+                                                <form action="/adminpanel/adminfunction.php" method="POST" class="d-inline">
+                                                    <button type="submit" name="delete_emp" value="<?= $items['id']; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt fa-lg"></i></button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -208,8 +208,8 @@ require '../config.php';
                                             <td>
                                                 <a href="dataview_stud.php?id=<?= $emp['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
                                                 <a href="dataedit_stud.php?id=<?= $emp['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a>
-                                                <form action="function.php" method="POST" class="d-inline">
-                                                    <button type="submit" name="delete_student" value="<?= $emp['id']; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt fa-lg"></i></button>
+                                                <form action="/adminpanel/adminfunction.php" method="POST" class="d-inline">
+                                                    <button type="submit" name="delete_emp" value="<?= $emp['id']; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt fa-lg"></i></button>
                                                 </form>
                                             </td>
                                         </tr>

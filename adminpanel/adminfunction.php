@@ -1,12 +1,12 @@
 <?php
 session_start();
-require '../../config.php';
+require '../config.php';
 
 // Delete employee
 if (isset($_POST['delete_emp'])) {
-    $emp_id = mysqli_real_escape_string($conn, $_POST['delete_emp']);
+    $employee_id = mysqli_real_escape_string($conn, $_POST['delete_emp']);
 
-    $query = "DELETE FROM admin_db WHERE id='$emp_id' ";
+    $query = "DELETE FROM admin_db WHERE id='$employee_id' ";
     $query_run = mysqli_query($conn, $query);
 
     if ($query_run) {
@@ -25,7 +25,7 @@ elseif (isset($_POST['update_emp'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $position = mysqli_real_escape_string($conn, $_POST['position']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);
-    $contact = mysqli_real_escape_string($conn, $_POST['contact']);
+    $contact_num = mysqli_real_escape_string($conn, $_POST['contact_num']);
     $birthdate = mysqli_real_escape_string($conn, $_POST['birthdate']);
     $gender = mysqli_real_escape_string($conn, $_POST['gender']);
 
@@ -37,14 +37,14 @@ elseif (isset($_POST['update_emp'])) {
             $picture = file_get_contents($photo_tmp_name);
             $picture = mysqli_real_escape_string($conn, $picture);
 
-            $query = "UPDATE admin_db SET name='$name', email='$email', position='$position', address='$address', contact='$contact', picture='$picture', birthdate='$birthdate', gender='$gender' WHERE employee_id='$employee_id'";
+            $query = "UPDATE admin_db SET name='$name', email='$email', position='$position', address='$address', contact_num='$contact_num', picture='$picture', birthdate='$birthdate', gender='$gender' WHERE employee_id='$employee_id'";
         } else {
             $_SESSION['message'] = "File upload error: " . $photo['error'];
             header("Location: empdb.php");
             exit(0);
         }
     } else {
-        $query = "UPDATE admin_db SET name='$name', email='$email', position='$position', address='$address', contact='$contact', birthdate='$birthdate', gender='$gender' WHERE employee_id='$employee_id'";
+        $query = "UPDATE admin_db SET name='$name', email='$email', position='$position', address='$address', contact_num='$contact_num', birthdate='$birthdate', gender='$gender' WHERE employee_id='$employee_id'";
     }
 
     $query_run = mysqli_query($conn, $query);
@@ -65,7 +65,7 @@ elseif (isset($_POST['save_emp'])) {
     $employee_id = mysqli_real_escape_string($conn, $_POST['employee_id']);
     $position = mysqli_real_escape_string($conn, $_POST['position']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);
-    $contact = mysqli_real_escape_string($conn, $_POST['contact']);
+    $contact_num = mysqli_real_escape_string($conn, $_POST['contact_num']);
     $birthdate = mysqli_real_escape_string($conn, $_POST['birthdate']);
     $gender = mysqli_real_escape_string($conn, $_POST['gender']);
 
@@ -74,8 +74,8 @@ elseif (isset($_POST['save_emp'])) {
         $picture = addslashes(file_get_contents($_FILES['photo']['tmp_name']));
     }
 
-    $query = "INSERT INTO admin_db (name, email, employee_id, position, address, contact, picture, birthdate, gender) 
-              VALUES ('$name', '$email', '$employee_id', '$position', '$address', '$contact', '$picture', '$birthdate', '$gender')";
+    $query = "INSERT INTO admin_db (name, email, employee_id, position, address, contact_num, picture, birthdate, gender) 
+              VALUES ('$name', '$email', '$employee_id', '$position', '$address', '$contact_num', '$picture', '$birthdate', '$gender')";
 
     $query_run = mysqli_query($conn, $query);
 
