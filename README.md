@@ -1,4 +1,4 @@
-# BarberEase ✂️
+# Tonic and Trim ✂️
 
 **BarberEase** is a streamlined booking system for barbershops that allows customers to schedule appointments with their preferred barber, view available time slots, and manage bookings. It also helps barbershop owners organize appointments and track customer preferences.
 
