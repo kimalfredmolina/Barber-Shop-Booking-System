@@ -20,9 +20,9 @@ if (isset($_POST['delete_emp'])) {
 
 // Update employee
 elseif (isset($_POST['update_emp'])) {
-    $employee_id = mysqli_real_escape_string($conn, $_POST['employee_id']);
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $employee_id = mysqli_real_escape_string($conn, $_POST['employee_id']);
     $position = mysqli_real_escape_string($conn, $_POST['position']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);
     $contact_num = mysqli_real_escape_string($conn, $_POST['contact_num']);
@@ -40,7 +40,7 @@ elseif (isset($_POST['update_emp'])) {
             $query = "UPDATE admin_db SET name='$name', email='$email', position='$position', address='$address', contact_num='$contact_num', picture='$picture', birthdate='$birthdate', gender='$gender' WHERE employee_id='$employee_id'";
         } else {
             $_SESSION['message'] = "File upload error: " . $photo['error'];
-            header("Location: empdb.php");
+            header("Location: admin_db.php");
             exit(0);
         }
     } else {

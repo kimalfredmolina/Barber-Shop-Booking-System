@@ -159,7 +159,7 @@ require '../config.php';
                             <?php
                             if (isset($_GET['search'])) {
                                 $filtervalues = $_GET['search'];
-                                $query = "SELECT * FROM admin_db WHERE CONCAT(id, employee_id, email, contact_num, position, name, address) LIKE '%$filtervalues%' LIMIT $offset, $records_per_page";
+                                $query = "SELECT * FROM admin_db WHERE CONCAT(id, employee_id, email, gender, birthdate, contact_num, position, name, address) LIKE '%$filtervalues%' LIMIT $offset, $records_per_page";
                                 $query_run = mysqli_query($conn, $query);
 
                                 if (mysqli_num_rows($query_run) > 0) {
@@ -172,10 +172,12 @@ require '../config.php';
                                             <td><?= $items['email']; ?></td>
                                             <td><?= $items['contact_num']; ?></td>
                                             <td><?= $items['position']; ?></td>
+                                            <td><?= $items['gender']; ?></td>
+                                            <td><?= $items['birthdate']; ?></td>
                                             <td><?= $items['address']; ?></td>
                                             <td>
                                                 <a href="admin_view.php?id=<?= $items['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
-                                                <a href="dataedit_stud.php?id=<?= $items['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a>
+                                                <a href="admin_edit.php?id=<?= $items['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a>
                                                 <form action="/adminpanel/adminfunction.php" method="POST" class="d-inline">
                                                     <button type="submit" name="delete_emp" value="<?= $items['id']; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt fa-lg"></i></button>
                                                 </form>
@@ -204,10 +206,12 @@ require '../config.php';
                                             <td><?= $emp['email']; ?></td>
                                             <td><?= $emp['contact_num']; ?></td>
                                             <td><?= $emp['position']; ?></td>
+                                            <td><?= $emp['gender']; ?></td>
+                                            <td><?= $emp['birthdate']; ?></td>
                                             <td><?= $emp['address']; ?></td>
                                             <td>
                                                 <a href="admin_view.php?id=<?= $emp['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
-                                                <a href="dataedit_stud.php?id=<?= $emp['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a>
+                                                <a href="admin_edit.php?id=<?= $emp['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a>
                                                 <form action="/adminpanel/adminfunction.php" method="POST" class="d-inline">
                                                     <button type="submit" name="delete_emp" value="<?= $emp['id']; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt fa-lg"></i></button>
                                                 </form>
