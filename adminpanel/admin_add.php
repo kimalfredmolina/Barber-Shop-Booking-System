@@ -39,7 +39,7 @@ require '../config.php';
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="/logout.php">Logout</a></li>
+                    <li><a class="dropdown-item" href="/adminpanel/logout.php">Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -62,7 +62,7 @@ require '../config.php';
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/adminpanel/admindb/admin_db.php">Employee Information</a>
+                                <a class="nav-link" href="/adminpanel/admin_db.php">Employee Information</a>
                                 <a class="nav-link" href="#">Reservation Information</a>
                             </nav>
                         </div>

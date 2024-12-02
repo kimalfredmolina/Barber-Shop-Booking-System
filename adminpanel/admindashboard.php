@@ -57,7 +57,7 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                    <li><a class="dropdown-item" href="/adminpanel/logout.php">Logout</a></li>
                 </ul>
             </li>
         </ul>

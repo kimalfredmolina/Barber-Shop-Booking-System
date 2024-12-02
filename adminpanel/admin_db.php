@@ -39,7 +39,7 @@ require '../config.php';
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                    <li><a class="dropdown-item" href="/adminpanel/logout.php">Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -62,7 +62,7 @@ require '../config.php';
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/adminpanel/admindb/admin_db.php">Employee Information</a>
+                                <a class="nav-link" href="/adminpanel/admin_db.php">Employee Information</a>
                                 <a class="nav-link" href="#">Reservation Information</a>
                             </nav>
                         </div>
@@ -174,7 +174,7 @@ require '../config.php';
                                             <td><?= $items['position']; ?></td>
                                             <td><?= $items['address']; ?></td>
                                             <td>
-                                                <a href="dataview_stud.php?id=<?= $items['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
+                                                <a href="admin_view.php?id=<?= $items['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
                                                 <a href="dataedit_stud.php?id=<?= $items['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a>
                                                 <form action="/adminpanel/adminfunction.php" method="POST" class="d-inline">
                                                     <button type="submit" name="delete_emp" value="<?= $items['id']; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt fa-lg"></i></button>
@@ -206,7 +206,7 @@ require '../config.php';
                                             <td><?= $emp['position']; ?></td>
                                             <td><?= $emp['address']; ?></td>
                                             <td>
-                                                <a href="dataview_stud.php?id=<?= $emp['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
+                                                <a href="admin_view.php?id=<?= $emp['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
                                                 <a href="dataedit_stud.php?id=<?= $emp['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a>
                                                 <form action="/adminpanel/adminfunction.php" method="POST" class="d-inline">
                                                     <button type="submit" name="delete_emp" value="<?= $emp['id']; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt fa-lg"></i></button>
