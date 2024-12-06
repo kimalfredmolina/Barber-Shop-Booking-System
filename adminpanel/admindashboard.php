@@ -6,17 +6,9 @@ $emp_count_query = "SELECT COUNT(*) AS emp_count FROM admin_db";
 $emp_count_result = mysqli_query($conn, $emp_count_query);
 $emp_count = mysqli_fetch_assoc($emp_count_result)['emp_count'];
 
-/*$faculty_count_query = "SELECT COUNT(*) AS faculty_count FROM faculty_tb";
-$faculty_count_result = mysqli_query($conn, $faculty_count_query);
-$faculty_count = mysqli_fetch_assoc($faculty_count_result)['faculty_count'];
-
-$staff_count_query = "SELECT COUNT(*) AS staff_count FROM staff_tb";
-$staff_count_result = mysqli_query($conn, $staff_count_query);
-$staff_count = mysqli_fetch_assoc($staff_count_result)['staff_count'];
-
-$event_count_query = "SELECT COUNT(*) AS event_count FROM event";
-$event_count_result = mysqli_query($conn, $event_count_query);
-$event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
+$reservation_count_query = "SELECT COUNT(*) AS reservation_count FROM reservation";
+$reservation_count_result = mysqli_query($conn, $reservation_count_query);
+$reservation_count = mysqli_fetch_assoc($reservation_count_result)['reservation_count'];
 
 
 ?>
@@ -81,7 +73,7 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="/adminpanel/admin_db.php">Employee Information</a>
-                                <a class="nav-link" href="#">Reservation Information</a>
+                                <a class="nav-link" href="/adminpanel/reserv_db.php">Reservation Information</a>
                             </nav>
                         </div>
                     </div>
@@ -114,48 +106,22 @@ $event_count = mysqli_fetch_assoc($event_count_result)['event_count'];*/
                             </div>
                         </div>
 
-                        <!--<div class="col-xl-3 col-md-6">
+                        <div class="col-xl-3 col-md-6">
                             <div class="card bg-success text-white mb-4">
                                 <div class="card-body d-flex justify-content-between align-items-center" style="font-size: 1.5rem;">
-                                    <span><i class="fa-solid fa-user fa-xl"></i></span>
-                                    <span>Total Faculties:</span>
-                                    <span class="text-white"><?= $faculty_count; ?></span>
+                                    <span><i class="fa-solid fa-calendar-check fa-xl"></i></span>
+                                    <span>Total Reservation:</span>
+                                    <span class="text-white"><?= $reservation_count; ?></span>
                                 </div>
                                 <div class="card-footer d-flex align-items-center justify-content-between" style="font-size: 1.25rem;">
-                                    <a class="large text-white stretched-link" href="/faculty/facultydb.php" style="font-size: 1rem;">View Details</a>
+                                    <a class="large text-white stretched-link" href="/adminpanel/reserv_db.php" style="font-size: 1rem;">View Details</a>
                                     <div class="large text-white" style="font-size: 1.25rem;"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-info text-white mb-4">
-                                <div class="card-body d-flex justify-content-between align-items-center" style="font-size: 1.5rem;">
-                                    <span><i class="fa-solid fa-user fa-xl"></i></span>
-                                    <span>Total Staff's:</span>
-                                    <span class="text-white"><?= $staff_count; ?></span>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between" style="font-size: 1.25rem;">
-                                    <a class="large text-white stretched-link" href="/staff/staffdb.php" style="font-size: 1rem;">View Details</a>
-                                    <div class="large text-white" style="font-size: 1.25rem;"><i class="fas fa-angle-right"></i></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-success text-white mb-4">
-                                <div class="card-body d-flex justify-content-between align-items-center" style="font-size: 1.5rem;">
-                                    <span><i class="fa-solid fa-calendar-days fa-xl"></i></span>
-                                    <span>Total Events:</span>
-                                    <span class="text-white"><?= $event_count; ?></span>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between" style="font-size: 1.25rem;">
-                                    <a class="large text-white stretched-link" href="/event/event.php" style="font-size: 1rem;">View Details</a>
-                                    <div class="large text-white" style="font-size: 1.25rem;"><i class="fas fa-angle-right"></i></div>
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>-->
-                        <!-- The rest of dashboard content -->
                     </div>
+                    <!-- The rest of dashboard content -->
+                </div>
             </main>
 
 
