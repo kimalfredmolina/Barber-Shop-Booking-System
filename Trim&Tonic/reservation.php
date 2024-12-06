@@ -70,7 +70,7 @@ Bootstrap 5 HTML CSS Template
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="images/Credit Cardshop.png" class="navbar-brand-image img-fluid" alt="">
+                    <img src="/Trim&Tonic/images/barbershop.png" class="navbar-brand-image img-fluid" alt="">
                     Trim & Tonic
                 </a>
 
@@ -138,7 +138,7 @@ Bootstrap 5 HTML CSS Template
                                                 </div>
 
                                                 <div class="col-lg-6 col-12">
-                                                    <input class="form-control" type="time" name="booking-form-time" value="18:30">
+                                                    <input class="form-control" type="time" name="booking-form-time" value="12:00">
                                                 </div>
 
                                                 <div class="col-lg-6 col-12">
