@@ -3,7 +3,6 @@ session_start();
 require '../config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve input values from the form
     $name = mysqli_real_escape_string($conn, $_POST['booking-form-name']);
     $phone = mysqli_real_escape_string($conn, $_POST['booking-form-phone']);
     $time = mysqli_real_escape_string($conn, $_POST['booking-form-time']);
@@ -11,14 +10,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $payment_method = mysqli_real_escape_string($conn, $_POST['position']);
     $comment = mysqli_real_escape_string($conn, $_POST['booking-form-message']);
 
-    // Insert data into the database
-    $sql = "INSERT INTO reservation (full_name, contact_num, time, date, payment, comment) 
-            VALUES ('$name', '$phone', '$time', '$date', '$payment_method', '$comment')";
+    $max_capacity = 10; // reservations per day
 
-    if (mysqli_query($conn, $sql)) {
-        echo "<script>alert('Reservation successful!');</script>";
+    $query = "SELECT COUNT(*) as reservation_count FROM reservation WHERE date = '$date'";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
+
+    if ($row['reservation_count'] >= $max_capacity) {
+        echo "<script>alert('Sorry, reservations for this date are full. Please choose another date.');</script>";
     } else {
-        echo "<script>alert('Error: " . mysqli_error($conn) . "');</script>";
+        $sql = "INSERT INTO reservation (full_name, contact_num, time, date, payment, comment) 
+                VALUES ('$name', '$phone', '$time', '$date', '$payment_method', '$comment')";
+
+        if (mysqli_query($conn, $sql)) {
+            echo "<script>alert('Reservation successful!');</script>";
+        } else {
+            echo "<script>alert('Error: " . mysqli_error($conn) . "');</script>";
+        }
     }
 }
 ?>
@@ -148,7 +156,7 @@ Bootstrap 5 HTML CSS Template
                                                 <div class="col-lg-12 col-12">
 
                                                     <select class="form-control" name="position" required>
-                                                        <option value="Select Payment">Select Mode of Payment</option>
+                                                        <option>Select Mode of Payment</option>
                                                         <option value="Gcash">Gcash</option>
                                                         <option value="PayMaya">Paymaya</option>
                                                         <option value="Credit Card">Credit Card</option>

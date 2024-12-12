@@ -183,7 +183,7 @@ require '../config.php';
 
                     <!-- Pagination Controls -->
                     <?php
-                    $total_records_query = "SELECT COUNT(*) AS total FROM admin_db";
+                    $total_records_query = "SELECT COUNT(*) AS total FROM reservation";
                     $total_records_result = mysqli_query($conn, $total_records_query);
                     $total_records = mysqli_fetch_assoc($total_records_result)['total'];
 
