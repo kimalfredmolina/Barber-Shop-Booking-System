@@ -132,10 +132,10 @@ require '../config.php';
                                             <td><?= $items['payment']; ?></td>
                                             <td><?= $items['comment']; ?></td>
                                             <td>
-                                                <a href="admin_view.php?id=<?= $items['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
-                                                <a href="admin_edit.php?id=<?= $items['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a>
+                                                <!--<a href="admin_view.php?id=<?= $items['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
+                                                <a href="admin_edit.php?id=<?= $items['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a> -->
                                                 <form action="/adminpanel/reserv_function.php" method="POST" class="d-inline">
-                                                    <button type="submit" name="delete_emp" value="<?= $items['id']; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt fa-lg"></i></button>
+                                                    <button type="submit" name="delete_emp" value="<?= $items['id']; ?>" class="btn btn-success btn-sm"><i class="fa-solid fa-check fa-lg"></i></button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -164,10 +164,10 @@ require '../config.php';
                                             <td><?= $emp['payment']; ?></td>
                                             <td><?= $emp['comment']; ?></td>
                                             <td>
-                                                <a href="admin_view.php?id=<?= $emp['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
-                                                <a href="admin_edit.php?id=<?= $emp['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a>
+                                                <!--<a href="admin_view.php?id=<?= $emp['id']; ?>" class="btn btn-info btn-sm"><i class="fas fa-info-circle fa-lg"></i></a>
+                                                <a href="admin_edit.php?id=<?= $emp['id']; ?>" class="btn btn-success btn-sm"><i class="fas fa-edit fa-lg"></i></a> -->
                                                 <form action="/adminpanel/reserv_function.php" method="POST" class="d-inline">
-                                                    <button type="submit" name="delete_emp" value="<?= $emp['id']; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt fa-lg"></i></button>
+                                                    <button type="submit" name="delete_emp" value="<?= $emp['id']; ?>" class="btn btn-success btn-sm"><i class="fa-solid fa-check fa-lg"></i></button>
                                                 </form>
                                             </td>
                                         </tr>
