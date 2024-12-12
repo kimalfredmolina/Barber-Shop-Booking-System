@@ -1,0 +1,13 @@
+pag di ma import tong file sa mysql database nyu create nlng kayu bagong database eto structure:
+
+
+database name: barbershop
+
+add new admin_db ipapangalan nyu then laman nya check the photo 
+admin_db.jpg paki gaya nlng un 
+
+and sa reservation naman add new reservation ipapangalan nyu then 
+laman nya check the photo reservation.png paki gaya nlng un 
+
+and kabuang structure ng database nasa structure
+
